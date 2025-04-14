@@ -150,7 +150,8 @@ def retrieve_data():
         else:
             st.write("Encrypted Data Enteries:")
             for index, item in enumerate(user_data):
-                st.code(f"{index+1}: {item}", language="text")
+                st.write(index+1)
+                st.code(item, language="text")
                 
             encrypted_input = st.text_area("Enter encrypted key:")
             passkey = st.text_input("Enter decrypt passkey:", type="password")
